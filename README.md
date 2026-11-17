@@ -78,6 +78,9 @@ Meloni原型机中，电流采样电路接在CE上，通过R5施加5 V的偏置�
 
 **3. 材料清单**
 
+> ⚠️ **本表已被 2026-03-20 工程版 BOM 取代，下单请以 [docs/v2-shopping-list.md](docs/v2-shopping-list.md) 为准**（含逐项采购链接、实际订单与偏差说明）。
+> 本表与工程实际有三处不一致：① 共模扼流圈实际是 **SMCM7060-102T**（SMD-4P，7×6 mm），本表的 ACM9070-272 是 9P/9×7 mm，**引脚数与焊盘都不兼容，焊不上**；② 本表漏了 **12 kΩ**（R2）电阻；③ 本表是按「买 INA219 模块再换采样电阻」列的，v2.0 工程实际是**自制 0603 贴片小板**。表中其余模块链接仍有效。
+
 - 
 
 - | 名称               | 数量              | 链接                                                 | 备注      |
@@ -353,6 +356,9 @@ In the Meloni prototype, the positions of CE and WE are reversed. We do not care
 Anyway, now that you understand the principle of the Meloni prototype, let's start building it.
 
 **3. Bill of Materials (BOM)**
+
+> ⚠️ **Superseded by the 2026-03-20 project BOM — order from [docs/v2-shopping-list.md](docs/v2-shopping-list.md) (Chinese) instead.**
+> Three discrepancies: the common-mode choke is **SMCM7060-102T** (SMD-4P, 7×6 mm), not ACM9070-272 (9-pin, 9×7 mm — different footprint, cannot be soldered on); **12 kΩ** (R2) is missing from this table; and v2.0 uses a **self-made 0603 SMD INA219 board**, not an off-the-shelf module with a swapped sense resistor. The other module links in the table below are still valid.
 
 - 1 * Raspberry Pi Pico
 - 1 * MCP4725 Module

@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 使用者是（电）化学工作者，**没有电子/数字电路基础**。讨论电路问题时，请用初学者能理解的方式解释（可借助电化学类比：GND ≈ 参比电极、电压都是相对测量）。
 - 日常交流使用**中文**。
 - 使用者自加的笔记统一放在 [docs/](docs/)：**文件名用英文 kebab-case，内容用中文**。现有：
-  - [docs/parts-shopping-guide.md](docs/parts-shopping-guide.md) — BOM 中未附链接元件（Pico、电阻、电容）的采购指南
+  - [docs/v2-shopping-list.md](docs/v2-shopping-list.md) — **v2.0 采购清单（唯一权威）**：按 epro2 工程实际 BOM 整理，含 2026-11-12 实际订单逐项链接、与工程的三处偏差、预算与下单顺序
   - [docs/electronics-learning-path.md](docs/electronics-learning-path.md) — 面向化学工作者的电子学学习路径
   - [docs/build-log.md](docs/build-log.md) — 复刻进度日志（**协作前先读它的"当前状态"**，从断点继续）
 
@@ -41,7 +41,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Pico 自带 ADC 故意不用**（噪声大，是作者改外置方案的原因）：测量链路是 MCP4725（DAC 出电压）→ 模拟电路 → INA219（测电流）；ADS1115 仅用于校准。因此 RP2040 兼容板的 ADC 缺陷不影响本仪器。
 - **INA219 采样电阻必须从 0.1 Ω 改为 10 Ω（1% 精度）**，否则电流分辨率不够。两条路线：商品 INA219 模块换贴片电阻（v1.0，适合零基础），或打样自制贴片小板（v2.0 作者方案，需热风枪）。
 - v2.0 的两颗 LDO（GM1204 = SOT-223、GM1206 = SOT-23）是**小封装贴片，需要热风枪**。
-- 板上电阻电容全部是**直插件**（1/4W 金属膜 1%、独石电容），BOM 未给链接的元件采购方法见 [docs/parts-shopping-guide.md](docs/parts-shopping-guide.md)。
+- 板上电阻电容全部是**直插件**（1/4W 金属膜 1%、独石电容；INA219 小板除外的贴片件见清单第 5 节），采购方法与逐项链接见 [docs/v2-shopping-list.md](docs/v2-shopping-list.md)。
 
 ## 修改代码时的注意点
 

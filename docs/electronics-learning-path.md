@@ -86,7 +86,7 @@
 
 ## 4. 五周计划（业余每周 3~5 小时）
 
-> **第 1 周就把元件全部下单**（见 [parts-shopping-guide.md](parts-shopping-guide.md)），快递路上正好学习。
+> **第 1 周就把元件全部下单**（见 [v2-shopping-list.md](v2-shopping-list.md)），快递路上正好学习。
 
 **Week 1 — 电路地基 + 采购**
 - 可汗学院电路学前几章（欧姆定律、分压、电容）；理解"地"的概念；
